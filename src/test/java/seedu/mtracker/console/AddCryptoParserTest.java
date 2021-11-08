@@ -81,7 +81,7 @@ class AddCryptoParserTest extends GeneralInstrumentParserTest {
             + SEPARATOR_SPECIFIER + FUTURE_DATE
             + SEPARATOR_SPECIFIER + "fooRemarks";
 
-    //@@KVignesh122
+    //@@author KVignesh122
     public static final String USER_INPUT_TRY_ABORT_AT_REMARK = "TTTXXX"
             + SEPARATOR_SPECIFIER + "23.4"
             + SEPARATOR_SPECIFIER + "positive"
@@ -163,7 +163,7 @@ class AddCryptoParserTest extends GeneralInstrumentParserTest {
         testCryptoParameters(USER_INPUT_TRY_PAST_EXPIRY, EXPECTED_PARAMS_WITH_REMARK);
     }
 
-    //@@KVignesh122
+    //@@author KVignesh122
     @Test
     void addCryptoParams_abortAtName_expectException() {
         assertThrows(OperationAbortedError.class,

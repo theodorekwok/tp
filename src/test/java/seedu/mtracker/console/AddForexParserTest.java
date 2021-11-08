@@ -5,7 +5,7 @@ import seedu.mtracker.commons.error.OperationAbortedError;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-//@@KVignesh122
+//@@author KVignesh122
 class AddForexParserTest extends GeneralInstrumentParserTest {
     public static final int PARAMETER_SIZE = 7;
 
