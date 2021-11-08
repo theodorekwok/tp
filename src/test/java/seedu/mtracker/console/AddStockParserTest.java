@@ -54,7 +54,7 @@ class AddStockParserTest extends GeneralInstrumentParserTest {
             + SEPARATOR_SPECIFIER + "positive"
             + SEPARATOR_SPECIFIER + "fooRemarks";
 
-    // @@KVignesh122
+    //@@author KVignesh122
     public static final String USER_INPUT_TRY_ABORT_AT_NAME = ABORT;
 
     public static final String USER_INPUT_TRY_ABORT_AT_PRICE = "TTTXXX"
@@ -109,7 +109,7 @@ class AddStockParserTest extends GeneralInstrumentParserTest {
         testStockParameters(USER_INPUT_TRY_INVALID_SENTIMENT, EXPECTED_PARAMS_WITH_REMARK);
     }
 
-    //@@KVignesh122
+    //@@author KVignesh122
     @Test
     void addStockParams_abortAtName_expectException() {
         assertThrows(OperationAbortedError.class,
