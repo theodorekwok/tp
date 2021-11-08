@@ -362,19 +362,20 @@ such information in a quick and easy way.
 
 |Priority|Version| As a ... | I want to ... | So that I can ...|
 |----|---|---|------|------------|
-|`***`|v1.0|user|add a stock|record details of the stock
-|`***`|v1.0|user|add a cryptocurrency|record details of the cryptocurrency
-|`***`|v1.0|user|add a forex|record details of the forex
-|`***`|v1.0|user|add an etf|record details of the etf
-|`***`|v1.0|user|see my recorded instruments|refer to all of my instruments with their corresponding details
-|`**`|v1.0|user|add additional information about an instrument|keep track of information other than the instrument's traits
-|`***`|v2.0|user|see my previously recorded instruments|continue adding to my list of instruments for my day to day trading
-|`**`|v2.0|user|have a clear and concise list of my instruments|easily look through the list without having too many details
-|`*`|v2.0|user|view further details of my instruments|view excessive details of each instrument without cluttering the list
-|`**`|v2.0|user|edit an instrument|update certain details of an instrument when their traits change
-|`**`|v2.0|user|mark instruments|so that I can have a checklist of instruments to prioritise
-|`**`|v2.0|user|find an instrument|locate an instrument without having to go through the entire list|
-|`*`|v2.1|user|abort an add/edit process|cancel adding/editing an instrument if my mind changes during the process.
+|***|v1.0|user|add a stock|record details of the stock|
+|***|v1.0|user|add a cryptocurrency|record details of the cryptocurrency|
+|***|v1.0|user|add a forex|record details of the forex|
+|***|v1.0|user|add an etf|record details of the etf|
+|***|v1.0|user|see my recorded instruments|refer to all of my instruments with their corresponding details|
+|**|v1.0|user|add additional information about an instrument|keep track of information other than the instrument's traits|
+|***|v2.0|user|see my previously recorded instruments|continue adding to my list of instruments for my day to day trading|
+|**|v2.0|user|have a clear and concise list of my instruments|easily look through the list without having too many details|
+|*|v2.0|user|view further details of my instruments|view excessive details of each instrument without cluttering the list|
+|**|v2.0|user|edit an instrument|update certain details of an instrument when their traits change|
+|**|v2.0|user|mark instruments|so that I can have a checklist of instruments to prioritise|
+|**|v2.0|user|find an instrument|locate an instrument without having to go through the entire list|
+|*|v2.1|user|abort an add/edit process|cancel adding/editing an instrument if my mind changes during the process.|
+
 ## Non-Functional Requirements
 
 1. The program should work on operating systems with `Java 11` installed. 
@@ -402,120 +403,142 @@ Feel free to come up with more test cases to try for yourself.
 **Launch and start up**
 
 1) Ensure that you have `Java 11` installed.
+
 2) Download the latest jar file [here](https://github.com/AY2122S1-CS2113T-T12-1/tp/releases). 
+
 3) In your terminal under the directory where the jar file is saved type `java -jar mTracker.jar`.
    1) If it is successful you should see a mTracker greet message. If you get an error message please create a new issue
       [here](https://github.com/AY2122S1-CS2113T-T12-1/tp/issues) along with a description of the error.
+
 4) Refer to the [userguide](https://github.com/AY2122S1-CS2113T-T12-1/tp/blob/master/docs/UserGuide.md) to understand how
 to use the program.
+
 
 **Add functionality Testing**
 
 To test the add functionality, there are a few test cases you can try:
 1. Testcase: Adding a stock with an empty name.
+
 ```
-    mTracker$main> add
+mTracker$main> add
     Please key in the type of instrument:
-    mTracker$add> stock
+mTracker$add> stock
     Name of stock:
 ```
+
 Expected: An error message that says name cannot be empty.
+
 ```
 Sorry stock cannot have an empty name!
-	Name of stock: 
+    Name of stock: 
 mTracker$add> 
 ```
+
 2. Testcase: Adding a crypto with an empty current price. 
+
 ```
 mTracker$main> add
-	Please key in the type of instrument: 
+    Please key in the type of instrument: 
 mTracker$add> crypto
-	Name of crypto: 
+    Name of crypto: 
 mTracker$add> bitcoin
-	Current Price: 
+    Current Price: 
 mTracker$add> 
 ```
+
 Expected: An error message that says current price cannot be empty.
+
 ```
 Sorry price cannot be empty.
-	Current Price: 
+    Current Price: 
 mTracker$add> 
 ```
+
 3. Testcase: Adding an etf with a past return of -150.
+
 ```
 mTracker$main> add
-	Please key in the type of instrument: 
+    Please key in the type of instrument: 
 mTracker$add> etf
-	Name of etf: 
+    Name of etf: 
 mTracker$add> SPY
-	Current Price: 
+    Current Price: 
 mTracker$add> 468.53
-	Sentiment for instrument: 
+    Sentiment for instrument: 
 mTracker$add> neutral
-	Past Returns (optional): 
+    Past Returns (optional): 
 mTracker$add> -150
 ```
+
 Expected: An error message that says past returns cannot be less than -100 and input will be ignored.     
+
 ```
 Sorry, past return inserted cannot be lesser than -100. Input value will be ignored.
-	Remarks (optional): 
+    Remarks (optional): 
 mTracker$add> 
 ```
+
 **Edit functionality Testing**
 
 To test the edit functionality, there are a few test cases you can try:
 1. Testcase: Edit an instrument at an index that is out of range. For example if you have less than 100 instruments in
 your list, you can try the example below.
+
 ```
 mTracker$main> edit 100
 ```
+
 Expected: An error message that says instrument does not exist at that index.
+
 ```
 Oops, instrument does not exist at that index.
 ```
+
 2. Testcase: Enter parameters that are not supported by stock type.
+
 ```
 mTracker$main> edit 7
-	Please enter one or more Stock parameters to edit separated by spaces only.
-	done-status, name, current-price, sentiment, remarks
+    Please enter one or more Stock parameters to edit separated by a single space only.
+    done-status, name, current-price, sentiment, remarks
 mTracker$edit> entry-price
 ```  
+
 Expected: An error message that says the parameter is invalid and will be ignored.
+
 ```
 entry-price is an invalid attribute of this instrument and will be ignored.
 ```
+
 **Delete functionality Testing**
 
 To test the delete functionality, there are a few test cases you can try:
 1. Testcase: Delete an instrument at an index that is out of range. For example if you have less than 100 instruments in
 your list, you can try the example below.
+
 ```
 mTracker$main> delete 100
 ```
+
 Expected: An error message that says instrument does not exist at that index.
+
 ```
 Oops, instrument does not exist at that index.
 ```
-2. Testcase: Deleting by providing a non-numerical index value.
-```
-mTracker$main> delete notANumber
-```
-Expected: An error message that says the index provided is invalid.
-```
-Oops an invalid index is given. 
-Please provide an acceptable index number corresponding to the instruments in the watchlist.
-```
+
 **Done functionality Testing**
 
 To test the done functionality, there are a few test cases you can try:
 1. Testcase: Set an already done instrument as done.
+
 ```
 mTracker$main> done 7
-	Nice! I have marked this instrument as completed:
-		[S][X] IBM; 144.61; positive
+    Nice! I have marked this instrument as completed:
+        [S][X] IBM; 144.61; positive
 mTracker$main> done 7
 ```
+
 Expected: An error message that says instrument is already done.
+
 ```
 Instrument at provided index has already been marked as completed!
 ```
@@ -524,10 +547,13 @@ Instrument at provided index has already been marked as completed!
 
 To test the find functionality, there are a few test cases you can try:
 1. Testcase: Try the find command without any search string.
+
 ```
 mTracker$main> find
 ```
+
 Expected: An error message that says please enter a search string.
+
 ```
 Oops, please input a search string after 'find' command.
 ```
@@ -536,18 +562,22 @@ Oops, please input a search string after 'find' command.
 
 To test the list functionality, there are a few test cases you can try:
 1. Testcase: Listing instruments with extraneous parameters.
+
 ```
 mTracker$main> list extraneous parameters
 ```
+
 Expected: It should perform the list action ignoring the additional words.
 
 **View functionality Testing**
 
 To test the view functionality, there are a few test cases you can try:
 1. Testcase: Viewing an instrument with extraneous parameters.
+
 ```
 mTracker$main> view 8 10
 ```
+
 Expected: It should return only the 8th instrument in the list ignoring the value `10`.
 
 **Loading storage file testing**
@@ -555,8 +585,6 @@ Expected: It should return only the 8th instrument in the list ignoring the valu
 To test the program against corruption of saved file data, there are a few test cases you can try:
 1. Testcase: In the saved file on a newline write `This is a fake instrument`.
 
-   Expected: It should say that incorrect instrument type is provided and that instrument would be ignored. 
-```
-Oops, it appears that the incorrect instrument type is provided in the mTracker.txt file
-Ignoring saved instrument 1 as it was corrupted.
-```
+   Expected: It should say that incorrect instrument type is provided and that instrument would be ignored.
+
+<img src="images/InvalidInstrumentTypeInFile.png" width="700"/>
