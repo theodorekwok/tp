@@ -446,8 +446,8 @@ mTracker$edit> abort
 
 ```
 mTracker$main> edit 1
-	Please enter one or more Stock parameters to edit separated by a single space only.
-	done-status, name, current-price, sentiment, remarks
+    Please enter one or more Etf parameters to edit separated by a single space only.
+	done-status, name, current-price, sentiment, past-returns, remarks
 mTracker$edit> name current-price
 	Enter new name:
 mTracker$edit> abort
