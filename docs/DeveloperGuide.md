@@ -496,15 +496,7 @@ Expected: An error message that says instrument does not exist at that index.
 ```
 Oops, instrument does not exist at that index.
 ```
-2. Testcase: Deleting by providing a non-numerical index value.
-```
-mTracker$main> delete notANumber
-```
-Expected: An error message that says the index provided is invalid.
-```
-Oops an invalid index is given. 
-Please provide an acceptable index number corresponding to the instruments in the watchlist.
-```
+
 **Done functionality Testing**
 
 To test the done functionality, there are a few test cases you can try:
@@ -555,8 +547,5 @@ Expected: It should return only the 8th instrument in the list ignoring the valu
 To test the program against corruption of saved file data, there are a few test cases you can try:
 1. Testcase: In the saved file on a newline write `This is a fake instrument`.
 
-   Expected: It should say that incorrect instrument type is provided and that instrument would be ignored. 
-```
-Oops, it appears that the incorrect instrument type is provided in the mTracker.txt file
-Ignoring saved instrument 1 as it was corrupted.
-```
+   Expected: It should say that incorrect instrument type is provided and that instrument would be ignored.
+<img src="images/InvalidInstrumentTypeInFile.png" width="700"/>
