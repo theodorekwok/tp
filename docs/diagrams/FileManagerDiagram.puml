@@ -2,7 +2,7 @@
 !include Styles.puml
 'https://plantuml.com/class-diagram
 
-Class main COLOR_MAIN
+Class Mtracker COLOR_MAIN
 
 Package "filemanager"  <<Rectangle>> {
      Class Storage COLOR_STORAGE {
@@ -33,7 +33,7 @@ Class TextUi COLOR_UI
 Class "{abstract}\n Instrument" as Instrument COLOR_MODEL
 Class InstrumentManager COLOR_MODEL
 
-main -down[COLOR_MAIN]->"1" Storage
+Mtracker -down[COLOR_MAIN]->"1" Storage
 
 Class outside COLOR_WHITE
  Storage -down[COLOR_STORAGE].> InstrumentEncoder
