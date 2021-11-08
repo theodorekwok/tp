@@ -18,8 +18,8 @@ Package "Model                    "  <<Rectangle>>{
 
 show InstrumentManager members
 
-Class main COLOR_MAIN
-main -down[COLOR_MODEL]-> InstrumentManager: getInstance()
+Class Mtracker COLOR_MAIN
+Mtracker -down[COLOR_MODEL]-> "             1" InstrumentManager
 InstrumentManager -up[COLOR_MODEL]-> "1"InstrumentManager
 Crypto -up[COLOR_MODEL]-|>Instrument
 Stock -up[COLOR_MODEL]-|>Instrument

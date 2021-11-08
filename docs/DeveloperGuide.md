@@ -27,7 +27,7 @@ program:
 <img src="images/ArchitectureDiagram.png" width="600"/>
 
 Major components of the app:
-* `MTracker` contains the `main` method responsible for launching and 
+* `main` contains the `MTracker` class which contains methods responsible for launching and 
 running the app. It first initializes the required components
   and executes the overall program.
 * `ui` holds the `TextUi` class, which is responsible for displaying various greetings, 

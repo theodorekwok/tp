@@ -1,7 +1,7 @@
 @startuml
 !include Styles.puml
 
-Class main COLOR_MAIN
+Class Mtracker COLOR_MAIN
 
 Package "console                 "<<Rectangle>>{
     Class InputParser COLOR_CONSOLE {
@@ -32,7 +32,7 @@ Class "{abstract}\nIndexedCommand" as IndexedCommand COLOR_COMMANDS
 Class TextUi COLOR_UI
 Class "{abstract}\nInstrument" as Instrument COLOR_MODEL
 
-main -down[COLOR_MAIN]->"1" InputParser
+Mtracker -down[COLOR_MAIN]->"1" InputParser
 AddInstrumentParser -up[COLOR_CONSOLE]-|> InputParser
 AddXYZParser -up[COLOR_CONSOLE]-|> AddInstrumentParser
 EditInstrumentParser -left[COLOR_CONSOLE]-|> InputParser
