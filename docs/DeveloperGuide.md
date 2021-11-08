@@ -418,19 +418,24 @@ to use the program.
 
 To test the add functionality, there are a few test cases you can try:
 1. Testcase: Adding a stock with an empty name.
+
 ```
 mTracker$main> add
     Please key in the type of instrument:
 mTracker$add> stock
     Name of stock:
 ```
+
 Expected: An error message that says name cannot be empty.
+
 ```
 Sorry stock cannot have an empty name!
     Name of stock: 
 mTracker$add> 
 ```
+
 2. Testcase: Adding a crypto with an empty current price. 
+
 ```
 mTracker$main> add
     Please key in the type of instrument: 
@@ -440,13 +445,17 @@ mTracker$add> bitcoin
     Current Price: 
 mTracker$add> 
 ```
+
 Expected: An error message that says current price cannot be empty.
+
 ```
 Sorry price cannot be empty.
     Current Price: 
 mTracker$add> 
 ```
+
 3. Testcase: Adding an etf with a past return of -150.
+
 ```
 mTracker$main> add
     Please key in the type of instrument: 
@@ -460,44 +469,58 @@ mTracker$add> neutral
     Past Returns (optional): 
 mTracker$add> -150
 ```
+
 Expected: An error message that says past returns cannot be less than -100 and input will be ignored.     
+
 ```
 Sorry, past return inserted cannot be lesser than -100. Input value will be ignored.
     Remarks (optional): 
 mTracker$add> 
 ```
+
 **Edit functionality Testing**
 
 To test the edit functionality, there are a few test cases you can try:
 1. Testcase: Edit an instrument at an index that is out of range. For example if you have less than 100 instruments in
 your list, you can try the example below.
+
 ```
 mTracker$main> edit 100
 ```
+
 Expected: An error message that says instrument does not exist at that index.
+
 ```
 Oops, instrument does not exist at that index.
 ```
+
 2. Testcase: Enter parameters that are not supported by stock type.
+
 ```
 mTracker$main> edit 7
     Please enter one or more Stock parameters to edit separated by a single space only.
     done-status, name, current-price, sentiment, remarks
 mTracker$edit> entry-price
 ```  
+
 Expected: An error message that says the parameter is invalid and will be ignored.
+
 ```
 entry-price is an invalid attribute of this instrument and will be ignored.
 ```
+
 **Delete functionality Testing**
 
 To test the delete functionality, there are a few test cases you can try:
 1. Testcase: Delete an instrument at an index that is out of range. For example if you have less than 100 instruments in
 your list, you can try the example below.
+
 ```
 mTracker$main> delete 100
 ```
+
 Expected: An error message that says instrument does not exist at that index.
+
 ```
 Oops, instrument does not exist at that index.
 ```
@@ -506,13 +529,16 @@ Oops, instrument does not exist at that index.
 
 To test the done functionality, there are a few test cases you can try:
 1. Testcase: Set an already done instrument as done.
+
 ```
 mTracker$main> done 7
     Nice! I have marked this instrument as completed:
         [S][X] IBM; 144.61; positive
 mTracker$main> done 7
 ```
+
 Expected: An error message that says instrument is already done.
+
 ```
 Instrument at provided index has already been marked as completed!
 ```
@@ -521,10 +547,13 @@ Instrument at provided index has already been marked as completed!
 
 To test the find functionality, there are a few test cases you can try:
 1. Testcase: Try the find command without any search string.
+
 ```
 mTracker$main> find
 ```
+
 Expected: An error message that says please enter a search string.
+
 ```
 Oops, please input a search string after 'find' command.
 ```
@@ -533,18 +562,22 @@ Oops, please input a search string after 'find' command.
 
 To test the list functionality, there are a few test cases you can try:
 1. Testcase: Listing instruments with extraneous parameters.
+
 ```
 mTracker$main> list extraneous parameters
 ```
+
 Expected: It should perform the list action ignoring the additional words.
 
 **View functionality Testing**
 
 To test the view functionality, there are a few test cases you can try:
 1. Testcase: Viewing an instrument with extraneous parameters.
+
 ```
 mTracker$main> view 8 10
 ```
+
 Expected: It should return only the 8th instrument in the list ignoring the value `10`.
 
 **Loading storage file testing**
