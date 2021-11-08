@@ -101,7 +101,7 @@ instrument to be added:
 
 ```
 mTracker$main> add
-	Please key in the type of instrument:
+    Please key in the type of instrument:
 mTracker$add> TYPE 
 ```
 
@@ -118,15 +118,15 @@ After keying in `stock` as the type of instrument, mTracker prompts for the foll
 **Example usage**
 ```
 mTracker$main> add
-	Please key in the type of instrument: 
+    Please key in the type of instrument: 
 mTracker$add> stock
-	Name of stock: 
+    Name of stock: 
 mTracker$add> IBM
-	Current Price: 
+    Current Price: 
 mTracker$add> 144.61
-	Sentiment for instrument: 
+    Sentiment for instrument: 
 mTracker$add> positive
-	Remarks (optional): 
+    Remarks (optional): 
 mTracker$add> 
 ```
 
@@ -153,17 +153,17 @@ After keying in `crypto` as the type of instrument, mTracker prompts for the fol
 
 ```
 mTracker$main> add
-	Please key in the type of instrument: 
+    Please key in the type of instrument: 
 mTracker$add> crypto
-	Name of crypto: 
+    Name of crypto: 
 mTracker$add> bitcoin
-	Current Price: 
+    Current Price: 
 mTracker$add> 14442.22
-	Sentiment for instrument: 
+    Sentiment for instrument: 
 mTracker$add> positive
-	Expiry (YYYY-MM-DD): 
+    Expiry (YYYY-MM-DD): 
 mTracker$add> 2021-12-14
-	Remarks (optional): 
+    Remarks (optional): 
 mTracker$add> 
 ```
 
@@ -192,17 +192,17 @@ other asset. After keying in `etf` as the type of instrument, mTracker prompts f
 **Example usage**
 ```
 mTracker$main> add
-	Please key in the type of instrument: 
+    Please key in the type of instrument: 
 mTracker$add> etf
-	Name of etf: 
+    Name of etf: 
 mTracker$add> SPY
-	Current Price: 
+    Current Price: 
 mTracker$add> 445.87
-	Sentiment for instrument: 
+    Sentiment for instrument: 
 mTracker$add> positive
-	Past Returns (optional): 
+    Past Returns (optional): 
 mTracker$add> 1200
-	Remarks (optional): 
+    Remarks (optional): 
 mTracker$add> Prices will plateau out in a few days.
 ```
 **Expected outcome**
@@ -236,21 +236,21 @@ following parameters:
 
 ```
 mTracker$main> add
-	Please key in the type of instrument: 
+    Please key in the type of instrument: 
 mTracker$add> forex
-	Name of forex: 
+    Name of forex: 
 mTracker$add> USDJPY
-	Current Price: 
+    Current Price: 
 mTracker$add> 114.289
-	Sentiment for instrument: 
+    Sentiment for instrument: 
 mTracker$add> negative
-	Entry Price: 
+    Entry Price: 
 mTracker$add> 114.20
-	Exit Price: 
+    Exit Price: 
 mTracker$add> 110.0
-	Expiry (YYYY-MM-DD): 
+    Expiry (YYYY-MM-DD): 
 mTracker$add> 2021-12-13
-	Remarks (optional): 
+    Remarks (optional): 
 mTracker$add> USD is losing momentum. Technical levels are holding firm.
 ```
 **Expected outcome**
@@ -372,12 +372,12 @@ instrument to be edited:
 
 ```
 mTracker$main> edit 2
-	Please enter one or more Etf parameters to edit separated by a single space only.
-	done-status, name, current-price, sentiment, past-returns, remarks
+    Please enter one or more Etf parameters to edit separated by a single space only.
+    done-status, name, current-price, sentiment, past-returns, remarks
 mTracker$edit> name current-price
-	Enter new name:
+    Enter new name:
 mTracker$edit> XLF
-	Enter new Current price:
+    Enter new Current price:
 mTracker$edit> 148.76
 ```
 
@@ -427,9 +427,9 @@ mTracker$add> abort
 
 ```
 mTracker$main> add
-Please key in the type of instrument:
+    Please key in the type of instrument:
 mTracker$add> stock
-Name of stock:
+    Name of stock:
 mTracker$add> abort
 Addition of new instrument has been aborted! You are in the main workspace now.
 ```
@@ -446,10 +446,10 @@ mTracker$edit> abort
 
 ```
 mTracker$main> edit 1
-    Please enter one or more Etf parameters to edit separated by a single space only.
-	done-status, name, current-price, sentiment, past-returns, remarks
+    Please enter one or more Stock parameters to edit separated by a single space only.
+    done-status, name, current-price, sentiment, remarks
 mTracker$edit> name current-price
-	Enter new name:
+    Enter new name:
 mTracker$edit> abort
 Edit process has been aborted! You are in the main workspace now.
 ```
