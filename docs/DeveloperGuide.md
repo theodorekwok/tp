@@ -360,21 +360,22 @@ such information in a quick and easy way.
 
 ## User Stories
 
-Priority|Version| As a ... | I want to ... | So that I can ...
-----|---|---|------|------------
-***|v1.0|user|add a stock|record details of the stock
-***|v1.0|user|add a cryptocurrency|record details of the cryptocurrency
-***|v1.0|user|add a forex|record details of the forex
-***|v1.0|user|add an etf|record details of the etf
-***|v1.0|user|see my recorded instruments|refer to all of my instruments with their corresponding details
-**|v1.0|user|add additional information about an instrument|keep track of information other than the instrument's traits
-***|v2.0|user|see my previously recorded instruments|continue adding to my list of instruments for my day to day trading
-**|v2.0|user|have a clear and concise list of my instruments|easily look through the list without having too many details
-*|v2.0|user|view further details of my instruments|view excessive details of each instrument without cluttering the list
-**|v2.0|user|edit an instrument|update certain details of an instrument when their traits change
-**|v2.0|user|mark instruments|so that I can have a checklist of instruments to prioritise
-**|v2.0|user|find an instrument|locate an instrument without having to go through the entire list|
-*|v2.1|user|abort an add/edit process|cancel adding/editing an instrument if my mind changes during the process.
+|Priority|Version| As a ... | I want to ... | So that I can ...|
+|----|---|---|------|------------|
+|***|v1.0|user|add a stock|record details of the stock|
+|***|v1.0|user|add a cryptocurrency|record details of the cryptocurrency|
+|***|v1.0|user|add a forex|record details of the forex|
+|***|v1.0|user|add an etf|record details of the etf|
+|***|v1.0|user|see my recorded instruments|refer to all of my instruments with their corresponding details|
+|**|v1.0|user|add additional information about an instrument|keep track of information other than the instrument's traits|
+|***|v2.0|user|see my previously recorded instruments|continue adding to my list of instruments for my day to day trading|
+|**|v2.0|user|have a clear and concise list of my instruments|easily look through the list without having too many details|
+|*|v2.0|user|view further details of my instruments|view excessive details of each instrument without cluttering the list|
+|**|v2.0|user|edit an instrument|update certain details of an instrument when their traits change|
+|**|v2.0|user|mark instruments|so that I can have a checklist of instruments to prioritise|
+|**|v2.0|user|find an instrument|locate an instrument without having to go through the entire list|
+|*|v2.1|user|abort an add/edit process|cancel adding/editing an instrument if my mind changes during the process.|
+
 ## Non-Functional Requirements
 
 1. The program should work on operating systems with `Java 11` installed. 
@@ -418,51 +419,51 @@ to use the program.
 To test the add functionality, there are a few test cases you can try:
 1. Testcase: Adding a stock with an empty name.
 ```
-    mTracker$main> add
+mTracker$main> add
     Please key in the type of instrument:
-    mTracker$add> stock
+mTracker$add> stock
     Name of stock:
 ```
 Expected: An error message that says name cannot be empty.
 ```
 Sorry stock cannot have an empty name!
-	Name of stock: 
+    Name of stock: 
 mTracker$add> 
 ```
 2. Testcase: Adding a crypto with an empty current price. 
 ```
 mTracker$main> add
-	Please key in the type of instrument: 
+    Please key in the type of instrument: 
 mTracker$add> crypto
-	Name of crypto: 
+    Name of crypto: 
 mTracker$add> bitcoin
-	Current Price: 
+    Current Price: 
 mTracker$add> 
 ```
 Expected: An error message that says current price cannot be empty.
 ```
 Sorry price cannot be empty.
-	Current Price: 
+    Current Price: 
 mTracker$add> 
 ```
 3. Testcase: Adding an etf with a past return of -150.
 ```
 mTracker$main> add
-	Please key in the type of instrument: 
+    Please key in the type of instrument: 
 mTracker$add> etf
-	Name of etf: 
+    Name of etf: 
 mTracker$add> SPY
-	Current Price: 
+    Current Price: 
 mTracker$add> 468.53
-	Sentiment for instrument: 
+    Sentiment for instrument: 
 mTracker$add> neutral
-	Past Returns (optional): 
+    Past Returns (optional): 
 mTracker$add> -150
 ```
 Expected: An error message that says past returns cannot be less than -100 and input will be ignored.     
 ```
 Sorry, past return inserted cannot be lesser than -100. Input value will be ignored.
-	Remarks (optional): 
+    Remarks (optional): 
 mTracker$add> 
 ```
 **Edit functionality Testing**
@@ -480,8 +481,8 @@ Oops, instrument does not exist at that index.
 2. Testcase: Enter parameters that are not supported by stock type.
 ```
 mTracker$main> edit 7
-	Please enter one or more Stock parameters to edit separated by spaces only.
-	done-status, name, current-price, sentiment, remarks
+    Please enter one or more Stock parameters to edit separated by a single space only.
+    done-status, name, current-price, sentiment, remarks
 mTracker$edit> entry-price
 ```  
 Expected: An error message that says the parameter is invalid and will be ignored.
@@ -507,8 +508,8 @@ To test the done functionality, there are a few test cases you can try:
 1. Testcase: Set an already done instrument as done.
 ```
 mTracker$main> done 7
-	Nice! I have marked this instrument as completed:
-		[S][X] IBM; 144.61; positive
+    Nice! I have marked this instrument as completed:
+        [S][X] IBM; 144.61; positive
 mTracker$main> done 7
 ```
 Expected: An error message that says instrument is already done.
