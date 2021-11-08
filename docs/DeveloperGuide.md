@@ -360,21 +360,21 @@ such information in a quick and easy way.
 
 ## User Stories
 
-|Priority|Version| As a ... | I want to ... | So that I can ...|
-|----|---|---|------|------------|
-|`***`|v1.0|user|add a stock|record details of the stock
-|`***`|v1.0|user|add a cryptocurrency|record details of the cryptocurrency
-|`***`|v1.0|user|add a forex|record details of the forex
-|`***`|v1.0|user|add an etf|record details of the etf
-|`***`|v1.0|user|see my recorded instruments|refer to all of my instruments with their corresponding details
-|`**`|v1.0|user|add additional information about an instrument|keep track of information other than the instrument's traits
-|`***`|v2.0|user|see my previously recorded instruments|continue adding to my list of instruments for my day to day trading
-|`**`|v2.0|user|have a clear and concise list of my instruments|easily look through the list without having too many details
-|`*`|v2.0|user|view further details of my instruments|view excessive details of each instrument without cluttering the list
-|`**`|v2.0|user|edit an instrument|update certain details of an instrument when their traits change
-|`**`|v2.0|user|mark instruments|so that I can have a checklist of instruments to prioritise
-|`**`|v2.0|user|find an instrument|locate an instrument without having to go through the entire list|
-|`*`|v2.1|user|abort an add/edit process|cancel adding/editing an instrument if my mind changes during the process.
+Priority|Version| As a ... | I want to ... | So that I can ...
+----|---|---|------|------------
+***|v1.0|user|add a stock|record details of the stock
+***|v1.0|user|add a cryptocurrency|record details of the cryptocurrency
+***|v1.0|user|add a forex|record details of the forex
+***|v1.0|user|add an etf|record details of the etf
+***|v1.0|user|see my recorded instruments|refer to all of my instruments with their corresponding details
+**|v1.0|user|add additional information about an instrument|keep track of information other than the instrument's traits
+***|v2.0|user|see my previously recorded instruments|continue adding to my list of instruments for my day to day trading
+**|v2.0|user|have a clear and concise list of my instruments|easily look through the list without having too many details
+*|v2.0|user|view further details of my instruments|view excessive details of each instrument without cluttering the list
+**|v2.0|user|edit an instrument|update certain details of an instrument when their traits change
+**|v2.0|user|mark instruments|so that I can have a checklist of instruments to prioritise
+**|v2.0|user|find an instrument|locate an instrument without having to go through the entire list|
+*|v2.1|user|abort an add/edit process|cancel adding/editing an instrument if my mind changes during the process.
 ## Non-Functional Requirements
 
 1. The program should work on operating systems with `Java 11` installed. 
@@ -402,12 +402,16 @@ Feel free to come up with more test cases to try for yourself.
 **Launch and start up**
 
 1) Ensure that you have `Java 11` installed.
+
 2) Download the latest jar file [here](https://github.com/AY2122S1-CS2113T-T12-1/tp/releases). 
+
 3) In your terminal under the directory where the jar file is saved type `java -jar mTracker.jar`.
    1) If it is successful you should see a mTracker greet message. If you get an error message please create a new issue
       [here](https://github.com/AY2122S1-CS2113T-T12-1/tp/issues) along with a description of the error.
+
 4) Refer to the [userguide](https://github.com/AY2122S1-CS2113T-T12-1/tp/blob/master/docs/UserGuide.md) to understand how
 to use the program.
+
 
 **Add functionality Testing**
 
@@ -548,4 +552,5 @@ To test the program against corruption of saved file data, there are a few test 
 1. Testcase: In the saved file on a newline write `This is a fake instrument`.
 
    Expected: It should say that incorrect instrument type is provided and that instrument would be ignored.
+
 <img src="images/InvalidInstrumentTypeInFile.png" width="700"/>
